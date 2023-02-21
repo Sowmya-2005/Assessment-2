@@ -1,0 +1,20 @@
+// 1. Given number is Amstrong number or not 
+#include<stdio.h>
+int main()
+{
+	int n, rem, sum, temp;
+	sum=0;
+	printf("Enter a positive number ");
+	scanf("%d", &n);
+	temp=n;                   // n value is stored in temp and if the sum value and temp value is same
+	while(n>0)                   // then the given number is amstrong number 
+	{
+		rem=n%10;
+		sum=sum+(rem*rem*rem);
+		n=n/10;
+	}
+	if(temp==sum)
+	   printf("%d is Armstrong Number", temp);
+	else
+	   printf("%d is not Armstrong Number", temp);   
+}
